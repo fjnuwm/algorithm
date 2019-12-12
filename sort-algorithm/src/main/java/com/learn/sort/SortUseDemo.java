@@ -31,5 +31,7 @@ public class SortUseDemo {
     System.out.println("希尔排序:" + Arrays.toString(ShellSort.sort(nums)));
 
     System.out.println("归并排序:" + Arrays.toString(MergeSort.sort(nums)));
+
+    System.out.println("快速排序:" + Arrays.toString(QuickSort.sort(nums)));
   }
 }

@@ -1,11 +1,14 @@
 package com.learn.sort;
 
 public class MergeSort {
+  private static int[] tempNums = null;
+
   public static int[] sort(int[] nums) {
     if (nums == null || nums.length <= 1) {
       return nums;
     }
     int[] sortedNums = nums.clone();
+    tempNums = new int[nums.length];
     doSort(sortedNums, 0, sortedNums.length - 1);
     return sortedNums;
   }
@@ -21,7 +24,6 @@ public class MergeSort {
   }
 
   private static void merge(int[] nums, int left, int mid, int right) {
-    int[] tempNums = new int[nums.length];
     int i = left;
     int j = mid + 1;
     int tempIdx = 0;
